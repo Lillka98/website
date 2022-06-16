@@ -1,0 +1,226 @@
+@media (max-width: 768px) {
+.menu {
+display: none;
+}
+
+<img class="svg2" src="img/svg2.svg"/>
+<img class="svg1" src="img/svg1.svg"/>
+<img class="hookah" src="img/hookah.svg"/>
+
+if (!isMobile) {
+  $(".slide-one").owlCarousel({
+  margin:0,
+  items:4,
+  nav:true,
+  });
+  $(".slide-two").owlCarousel({
+  items:3,
+ });
+}
+
+
+
+
+
+
+
+
+<div class="classic">
+  <div class="classic_hookahs">
+    <h1 class="classic_hookahs_name">Кальяны на глиняной чаше</h1>
+    <p class="standart"> Standart: <span class="standart_price">&nbsp;1200 ?</span> <br> Крепость: легкий</p>
+    <p class="premium"> Premium: <span class="standart_price">&nbsp;1500 ?</span> <br> Крепость: легкий</p>
+    <h1 class="clas">Замена чаши</h1>
+    <p class="premium"> Standart: <span class="standart_price">&nbsp;900 ?</span> <br> Premium: <span class="standart_price">&nbsp;1200 ?</span></p>
+  </div>
+  <div class="classic_hookahs2">
+    <h1 class="classic_hookahs_name">Кальяны на фруктовой чаше</h1>
+    <h1 class="clas">Апельсин</h1>
+    <p class="premium"> Standart: <span class="standart_price">&nbsp;1600 ?</span> <br> Premium: <span class="standart_price">&nbsp;1900 ?</span></p>
+    <h1 class="clas">Яблоко</h1>
+    <p class="premium"> Standart: <span class="standart_price">&nbsp;1600 ?</span> <br> Premium: <span class="standart_price">&nbsp;1900 ?</span></p>
+    <h1 class="clas">Грейпфрут</h1>
+    <p class="premium"> Standart: <span class="standart_price">&nbsp;1900 ?</span> <br> Premium: <span class="standart_price">&nbsp;2300 ?</span></p>
+    <h1 class="clas">Ананас</h1>
+    <p class="premium"> Standart: <span class="standart_price">&nbsp;1900 ?</span> <br> Premium: <span class="standart_price">&nbsp;2300 ?</span></p>
+  </div>
+  <div class="classic_hookahs3">
+    <h1 class="classic_hookahs_name">Добавки в колбу</h1>
+    <p class="prem"> Вино: <span class="standart_price">&nbsp;600 ?</span> <p>
+    <p class="prem"> Мята: <span class="standart_price">&nbsp;100 ?</span> <p>
+    <p class="prem"> Молоко: <span class="standart_price">&nbsp;200 ?</span> <p>
+    <p class="prem"> Сок в ассортименте: <span class="standart_price">&nbsp;300 ?</span> <p>
+    <p class="prem_text"> Вы можете добавить в кальян любой алкоголь из барной карты ресторана Panorama A.S.P.  <p>
+  </div>
+</div>
+
+.wrapper {
+width: 87%;
+}
+.header {
+padding: 24px 0 0 0;
+margin-bottom: 28px;
+}
+.logo {
+width: 41px;
+height: 35px;
+}
+.menu__item_active::after {
+background: none;
+}
+.menu__btn {
+display: flex; /* используем flex для центрирования содержимого */
+align-items: center;  /* центрируем содержимое кнопки */
+position: fixed;
+top: 28px;
+right: 24px;
+width: 26px;
+height: 26px;
+cursor: pointer;
+z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+display: block;
+position: absolute;
+width: 100%;
+height: 2px;
+background-color: #0056EC;
+}
+.menu__btn > span::before {
+content: '';
+top: -8px;
+}
+.menu__btn > span::after {
+content: '';
+top: 8px;
+}
+.menu {
+display: block;
+position: fixed;
+visibility: hidden;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 186px 0;
+list-style: none;
+text-align: center;
+background-color:white;
+box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+/* элементы меню */
+.menu__item {
+margin-right: 0;
+display: block;
+padding:12px 24px;
+color: #000;
+font: 500 30px/35px Roboto, arial, helvetica, sans-serif;
+}
+
+.menu__item:hover {
+background-color: #CFD8DC;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+top: 0;
+transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+top: 0;
+transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu {
+visibility: visible;
+left: 0;
+}
+.main {
+padding: 74% 0 0 0;
+background-size: 85%;
+background-position: top center;
+text-align: center;
+}
+.main__title {
+padding: 0 0 0  4px;
+font: bold 30px/40px "pt_serifbold", arial, helvetica, sans-serif;
+margin: 19px 0 35px 0;
+width: 267px;
+}
+.main__subtitel {
+margin-top: 0;
+margin-bottom: 40px;
+font: 500 16px/19px Roboto, arial, helvetica, sans-serif;
+}
+.main__button {
+font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+padding: 14px 25px 13px 16px;
+ }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+.wrapper {
+width: 91%;
+}
+.header {
+margin-bottom: 87px;
+}
+.main {
+background-size: 54%;
+}
+
+.main__title {
+padding-top: 13px;
+font: bold 50px/66px "pt_serifbold", arial, helvetica, sans-serif;
+align-items: center;
+width:434px;
+}
+.main__subtitel {
+font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
+width:367px;
+margin-bottom: 35px;
+}
+.main__button {
+font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+}
+.menu__item {
+margin-right: 24px;
+font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+margin-top: 8px;
+}
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+.wrapper {
+width: 68%;
+}
+.menu__item {
+margin-right: 24px;
+font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+/* margin-top: 8px; */
+}
+.main {
+background-size: 55%;
+}
+.header {
+margin-bottom: 80px;
+}
+.main__title {
+padding-top: 23px;
+font: bold 50px/66px "pt_serifbold", arial, helvetica, sans-serif;
+align-items: center;
+width:434px;
+margin-bottom: 34px;
+}
+.main__subtitel {
+font: 500 18px/21px Roboto, arial, helvetica, sans-serif;
+width:367px;
+margin-bottom: 34px;
+}
+.main__button {
+font: 500 14px/16px Roboto, arial, helvetica, sans-serif;
+}
+}
